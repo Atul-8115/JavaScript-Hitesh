@@ -5,7 +5,7 @@
 
 let name = "hitesh"
 let age = 18
-let isLoggedIn = flase;
+let isLoggedIn = false;
 
 // number => 2 to power 53
 // bigint
@@ -18,3 +18,5 @@ let isLoggedIn = flase;
 // object
 
 console.log(typeof "atul");
+console.log(typeof undefined);
+console.log(typeof null);
