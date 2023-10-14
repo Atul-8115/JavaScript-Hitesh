@@ -65,8 +65,8 @@ const {courseInstructor: Instructor} = course; // Destructuring
 console.log(Instructor);
 
 // JSON
-{
-    "name": "hitesh",
-    "coursename": "js in hindi",
-    "price": "free"
-}
+// {
+//     "name": "hitesh",
+//     "coursename": "js in hindi",
+//     "price": "free"
+// }
