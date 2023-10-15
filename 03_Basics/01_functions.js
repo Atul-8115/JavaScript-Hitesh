@@ -57,3 +57,18 @@ handleObject({
     username: "Badal",
     price: 199
 })
+
+/* Hoisting Concept */
+console.log(addone(5));
+function addone(num) {
+    return num + 1
+}
+
+addone(5);
+
+// Function Expression
+// addTwo(5); // Can't be Expressed
+const addTwo = function(num) {
+    return num + 2;
+}
+
