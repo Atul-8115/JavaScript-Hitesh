@@ -24,3 +24,9 @@ switch (month) {
 // falsy values
 
 // false, 0, -0, BigInt 0n, "", null, undefined, NaN
+
+const emptyObj = {}
+
+if(Object.keys(emptyObj).length === 0) {
+    console.log("Object is empty");
+}
