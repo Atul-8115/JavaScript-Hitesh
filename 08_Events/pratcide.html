@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Random color example — event handler attribute</title>
+    <style>
+      button {
+        margin: 10px
+      };
+    </style>
+  </head>
+  <body>
+    <button>Change color</button>
+    <input id="textBox" type="text" />
+    <div id="output"></div>
+    
+  </body>
+  <script>
+    const textBox = document.querySelector('#textBox');
+    const output = document.querySelector('#output')
+    textBox.addEventListener('keydown', (event) => {
+      output.textContent = `You pressed ${event.key}. `
+    })
+
+
+
+    const btn = document.querySelector("button");
+
+function random(number) {
+return Math.floor(Math.random() * (number + 1));
+}
+
+function changeBackground() {
+const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+document.body.style.backgroundColor = rndCol;
+}
+
+//btn.addEventListener("click", changeBackground);
+//btn.removeEventListener('mouseover',changeBackground);
+    
+const controller = new AbortController();
+btn.addEventListener("click", changeBackground,{ signal: controller.signal});
+controller.abort(); //removes any/all event handlers associated with this controller
+  </script>
+</html>

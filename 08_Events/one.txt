@@ -1,0 +1,2 @@
+***************** Important Points regarding Events *****************
+1.Note: Web events are not part of the core JavaScript language — they are defined as part of the APIs built into the browser.
