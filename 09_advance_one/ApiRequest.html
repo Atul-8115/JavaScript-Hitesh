@@ -4,14 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: #212121;">
+<body >
         <!-- 0	UNSENT	Client has been created. open() not called yet.
     1	OPENED	open() has been called.
     2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
     3	LOADING	Downloading; responseText holds partial data.
     4	DONE	The operation is complete. -->
     <!-- Homework -> create card that shows profile pic and followers count -->
+    <main class="container">
+        <div class="card">
+          <img src="https://avatars.githubusercontent.com/u/11613311?v=4" alt="User image" class="card__image" />
+          <div class="card__text">
+            <h2>Alexandra Caulea</h2>
+            <p>I enjoy drinking a cup of chai every day</p>
+          </div>
+          <ul class="card__info">
+            <li>
+              <span class="card__info__stats" id="repos"></span>
+              <span>repos</span>
+            </li>
+            <li>
+              <span class="card__info__stats" id="followers"></span>
+              <span>followers</span>
+            </li>
+            <li>
+              <span class="card__info__stats" id="following">20</span>
+              <span>following</span>
+            </li>
+          </ul>
+          <div class="card__action">
+            <button class="card__action__button card__action--follow" id="follow">follow</button>
+            <button class="card__action__button card__action--message" id="message">message</button>
+          </div>
+        </div>
+      </main>
 </body>
 <script>
      const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
@@ -22,8 +50,10 @@
         if(xhr.readyState === 4) {
             const data = JSON.parse (this.responseText)
             console.log(typeof data)
-            console.log(data.followers
-            )
+            document.querySelector('h2').innerHTML = data.name
+            document.querySelector('#repos').innerHTML = data.public_repos
+            document.querySelector('#followers').innerHTML = data.followers
+            document.querySelector('#following').innerHTML = data.following
         }
      }
      xhr.send()
