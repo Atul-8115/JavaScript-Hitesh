@@ -32,4 +32,12 @@ const userTwo = new User("ChaiAurCode", 11, false)
 // console.log(userOne);
 // console.log(userTwo);
 
+/*
+    ************ Notes for instance of ************
+    The instanceof operator tests to see if the prototype property of a constructor 
+    appears anywhere in the prototype chain of an object. 
+    The return value is a boolean value. 
+    Its behavior can be customized with Symbol.hasInstance.
+*/
+
 console.log(userOne.constructor);
