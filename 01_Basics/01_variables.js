@@ -10,3 +10,9 @@ accountPassword = "21212121";
    because of issue in block scope and functional scope
  */
 console.table([accountId,accountEmail,accountPassword,accountCity]);
+
+if(true) {
+  myName = "Atul"
+}
+
+console.log(myName)
